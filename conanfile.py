@@ -4,7 +4,7 @@ import os
 
 class CppcheckinstallerConan(ConanFile):
     name = "cppcheck_installer"
-    version = "1.88"
+    version = "1.89"
     license = "GPL 3.0"
     author = "Torfinn Berset <torfinn@bloomlife.com>"
     url = "https://github.com/torfinnberset/conan-cppcheck-installer"
