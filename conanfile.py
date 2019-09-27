@@ -17,7 +17,9 @@ class CppcheckinstallerConan(ConanFile):
         
     def package(self):
         cmake = CMake(self)
-        cmake.configure(source_folder=F"cppcheck-{self.version}", defs={"CMAKE_INSTALL_PREFIX": self.package_folder})
+        cmake.configure(
+            source_folder=F"cppcheck-{self.version}", defs={'FILESDIR': os.path.join(self.package_folder, 'bin')}
+        )
         cmake.install()
 
     def package_info(self):
